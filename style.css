@@ -1,0 +1,10 @@
+.soldOut {
+    opacity: 0.5;
+}
+.onSale {
+    background-color: brown;
+}
+
+.removeDiscount {
+    display: none;
+}
