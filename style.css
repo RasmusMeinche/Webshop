@@ -1,3 +1,92 @@
+/* Index */
+
+.mainNav {
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+}
+
+ul li {
+    padding: 1.8%;
+    background-color: rgb(221, 221, 221);
+    margin: 10% auto;
+    width: 20%;
+    list-style-type: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li:hover {
+    color: aliceblue;
+}
+
+nav {
+    text-align: end;
+}
+
+/* Category */
+
+ol {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+ol li {
+    background-color: rgb(54, 215, 220);
+    margin: 10% auto;
+    list-style-type: none;
+    text-align: center;
+    padding: 1.8%;
+    font-size: 20px;
+}
+
+ol li a {
+    text-decoration: none;
+    color: black;
+    width: 20%;
+}
+
+ol li:hover{
+    background-color: aliceblue;
+}
+
+
+/* productlist */
+
+#productTemplate {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fire lige store kolonner */
+    gap: 20px; /* Afstand mellem produkterne, hvis du ønsker det */
+    padding: 20px; /* Lidt padding for at skabe plads omkring produkterne */
+}
+
+.smallProduct {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.smallProduct a{
+      text-decoration: none;
+      color: black;
+  }
+  
+  .smallProduct img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Put on classes */
+
 .soldOut {
     opacity: 0.5;
 }

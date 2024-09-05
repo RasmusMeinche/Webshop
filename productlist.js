@@ -1,16 +1,14 @@
 window.addEventListener("DOMContentLoaded", init);
 
-const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get("category");
+const params = new URLSearchParams(document.location.search);
+const category = params.get("category");
+let url = undefined;
 
-fetch("https://kea-alt-del.dk/t7/api/products?category="+category)
-.then((res)=>res.json())
-.then(init);
-
-
-const productsURI = "https://kea-alt-del.dk/t7/api/products";
-// const id = 1163;
-// const productsURI = `https://kea-alt-del.dk/t7/api/products/${id}`;
+if (params.has("category")) {
+  url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+} else {
+  url = "https://kea-alt-del.dk/t7/api/products";
+}
 
 let productList;
 let productTemplate;
@@ -22,15 +20,16 @@ function init() {
   productTemplate = document.querySelector("template").content;
   console.log("productTemplate", productTemplate);
 
-  fetch(productsURI)
+  fetch(url)
     .then((response) => {
       console.log("response", response);
       return response.json();
     })
-    .then(handleData);
+    .then(showProducts);
 }
 
-function handleData(json) {
+
+function showProducts(json) {
   console.log("json", json);
   json.forEach(showProduct);
 }
