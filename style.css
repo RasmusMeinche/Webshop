@@ -2,6 +2,18 @@
 
 .mainNav {
     text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.mainNav h1 {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.mainNav a {
+    text-decoration: none;
 }
 
 ul {
@@ -34,29 +46,30 @@ nav {
 
 /* Category */
 
-ol {
+#categorylist {
     display: flex;
-    gap: 10px;
-    width: 100%;
+    flex-direction: row;
+    margin-top: 100px;
+    width: 60%;
+    margin: 100px auto;
 }
 
-ol li {
-    background-color: rgb(54, 215, 220);
-    margin: 10% auto;
+#categorylist li {
+    padding: 20px;
     list-style-type: none;
-    text-align: center;
-    padding: 1.8%;
-    font-size: 20px;
+    margin: 0 auto;
+    background-color: rgb(221, 221, 221);
+    justify-content: space-between;
 }
 
-ol li a {
-    text-decoration: none;
+#categorylist li a{
     color: black;
-    width: 20%;
+    text-decoration: none;
+    text-align: center;
 }
 
-ol li:hover{
-    background-color: aliceblue;
+#categorylist li:hover {
+    background-color: #838383;
 }
 
 
@@ -64,9 +77,9 @@ ol li:hover{
 
 #productTemplate {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Fire lige store kolonner */
-    gap: 20px; /* Afstand mellem produkterne, hvis du ønsker det */
-    padding: 20px; /* Lidt padding for at skabe plads omkring produkterne */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
 .smallProduct {
@@ -84,6 +97,68 @@ ol li:hover{
     max-width: 100%;
     height: auto;
   }
+
+main h2 {
+    text-align: center;
+    margin-top: 7%;
+    font-family: fantasy;
+}
+
+
+
+/* Product */
+
+.none {
+    display: none;
+}
+
+.productImg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.purchaseBox {
+    text-align: center;
+}
+
+.info {
+        width: 40%; /* Define the width of the info section */
+        max-width: 800px; /* Optional: limit the max width for larger screens */
+        margin: 100px auto; /* Center the section horizontally */
+        text-align: left;
+        background-color: rgb(221, 221, 221);
+    }
+    
+    dl {
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    dt,
+    dd {
+      display: block;
+      margin-left: 0;
+      padding-left: 0;
+      padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    dt {
+      font-weight: 500;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      clear: both;
+      background-color: #dadada;
+    }
+    
+    dd {
+      margin-top: 0px;
+      padding-top: 0px;
+      padding-bottom: 10px;
+      background-color: #f6f0e8;
+    }
+
 
 /* Put on classes */
 
